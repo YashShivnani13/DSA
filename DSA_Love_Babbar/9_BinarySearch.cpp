@@ -43,6 +43,81 @@
 
 //First and Last Position of an Element In Sorted Array
 
+// #include <iostream>
+// using namespace std;
+
+// int firstOcc(int arr[], int n, int k){
+//     int start = 0;
+//     int end = n-1;
+//     int ans=-1;
+
+//     int mid = start + (end-start)/2;
+
+//     while(start<=end){
+//         if(arr[mid]==k){
+//             ans = mid;
+//             end = mid-1;
+//         }
+
+//         else if(k>mid){
+//             start = mid+1;
+//         }
+        
+//         else{
+//             end = mid-1;
+//         }
+//         mid = start + (end-start)/2;
+//     }
+//     return ans;
+// }
+
+
+// int lastOcc(int arr[], int n, int k){
+//     int start = 0;
+//     int end = n-1;
+//     int ans=-1;
+
+//     int mid = start + (end-start)/2;
+
+//     while(start<=end){
+//         if(arr[mid]==k){
+//             ans = mid;
+//             start = mid+1;
+//         }
+
+//         else if(k>mid){
+//             start = mid+1;
+//         }
+        
+//         else{
+//             end = mid-1;
+//         }
+//         mid = start + (end-start)/2;
+//     }
+//     return ans;
+// }
+
+ 
+// int main(){
+
+//     int arr[10] = {1,2,3,3,3,3,4,6,7,9};
+    
+//     int First = firstOcc(arr,10,3);
+//     int Last = lastOcc(arr,10,3);
+
+//     cout<<"First occurence of key is "<<First << endl;
+//     cout<<"Last occurence of key is "<<Last << endl;
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+//Total no. of Occurence in sorted array
 #include <iostream>
 using namespace std;
 
@@ -105,8 +180,9 @@ int main(){
     int First = firstOcc(arr,10,3);
     int Last = lastOcc(arr,10,3);
 
-    cout<<"First occurence of key is "<<First << endl;
-    cout<<"Last occurence of key is "<<Last << endl;
+    int total = (Last-First) +1;
+
+    cout<<"Total no. of occurence "<< total <<endl;
 
     return 0;
 }
