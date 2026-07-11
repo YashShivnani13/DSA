@@ -118,71 +118,101 @@
 
 
 //Total no. of Occurence in sorted array
+// #include <iostream>
+// using namespace std;
+
+// int firstOcc(int arr[], int n, int k){
+//     int start = 0;
+//     int end = n-1;
+//     int ans=-1;
+
+//     int mid = start + (end-start)/2;
+
+//     while(start<=end){
+//         if(arr[mid]==k){
+//             ans = mid;
+//             end = mid-1;
+//         }
+
+//         else if(k>mid){
+//             start = mid+1;
+//         }
+        
+//         else{
+//             end = mid-1;
+//         }
+//         mid = start + (end-start)/2;
+//     }
+//     return ans;
+// }
+
+
+// int lastOcc(int arr[], int n, int k){
+//     int start = 0;
+//     int end = n-1;
+//     int ans=-1;
+
+//     int mid = start + (end-start)/2;
+
+//     while(start<=end){
+//         if(arr[mid]==k){
+//             ans = mid;
+//             start = mid+1;
+//         }
+
+//         else if(k>mid){
+//             start = mid+1;
+//         }
+        
+//         else{
+//             end = mid-1;
+//         }
+//         mid = start + (end-start)/2;
+//     }
+//     return ans;
+// }
+
+ 
+// int main(){
+
+//     int arr[10] = {1,2,3,3,3,3,4,6,7,9};
+    
+//     int First = firstOcc(arr,10,3);
+//     int Last = lastOcc(arr,10,3);
+
+//     int total = (Last-First) +1;
+
+//     cout<<"Total no. of occurence "<< total <<endl;
+
+//     return 0;
+// }
+
+
+
+//pivot element (the smallest element) in a sorted and rotated array.
 #include <iostream>
 using namespace std;
 
-int firstOcc(int arr[], int n, int k){
-    int start = 0;
-    int end = n-1;
-    int ans=-1;
+int pivot(int arr[], int n){
+    int s = 0;
+    int e = n-1;
+    int mid = s+(e-s)/2;
 
-    int mid = start + (end-start)/2;
-
-    while(start<=end){
-        if(arr[mid]==k){
-            ans = mid;
-            end = mid-1;
+    while(s<e){
+        if(arr[mid]>arr[0]){
+            s = mid+1;
+        }else{
+            e=mid;
         }
-
-        else if(k>mid){
-            start = mid+1;
-        }
-        
-        else{
-            end = mid-1;
-        }
-        mid = start + (end-start)/2;
+        mid = s+(e-s)/2;
     }
-    return ans;
+    return s;
 }
 
-
-int lastOcc(int arr[], int n, int k){
-    int start = 0;
-    int end = n-1;
-    int ans=-1;
-
-    int mid = start + (end-start)/2;
-
-    while(start<=end){
-        if(arr[mid]==k){
-            ans = mid;
-            start = mid+1;
-        }
-
-        else if(k>mid){
-            start = mid+1;
-        }
-        
-        else{
-            end = mid-1;
-        }
-        mid = start + (end-start)/2;
-    }
-    return ans;
-}
-
- 
 int main(){
+    int arr [8] = {4,6,7,8,9,10,11,1};
 
-    int arr[10] = {1,2,3,3,3,3,4,6,7,9};
-    
-    int First = firstOcc(arr,10,3);
-    int Last = lastOcc(arr,10,3);
-
-    int total = (Last-First) +1;
-
-    cout<<"Total no. of occurence "<< total <<endl;
+    cout<<"Pivot is at " << pivot(arr,8) << endl;
 
     return 0;
 }
