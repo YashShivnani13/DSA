@@ -12,7 +12,7 @@ This repository is part of my DSA learning journey. It includes solutions to pro
 
 ## 📂 Topics Covered
 
-- Basics
+- C++ Basics
 - Arrays
 - Linear Search
 - Binary Search
