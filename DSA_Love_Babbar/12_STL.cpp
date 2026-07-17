@@ -1,4 +1,4 @@
-//ARRAY STL
+//ARRAY 
 
 // #include <iostream>
 // #include <array>                      //not used much
@@ -264,35 +264,111 @@
 //Set
 
 
-#include <iostream>
-#include <set>
+// #include <iostream>
+// #include <set>
 
-using namespace std;
+// using namespace std;
 
-int main(){
-    set<int> s;
+// int main(){
+//     set<int> s;
 
-    s.insert(6);
-    s.insert(1);
-    s.insert(7);
-    s.insert(3);
-    s.insert(0);
-    s.insert(6);
-    s.insert(6);
+//     s.insert(6);
+//     s.insert(1);
+//     s.insert(7);
+//     s.insert(3);
+//     s.insert(0);
+//     s.insert(6);
+//     s.insert(6);
 
-    for(auto i : s){
-        cout<<i<<" ";
-    } cout<<endl;
+//     for(auto i : s){
+//         cout<<i<<" ";
+//     } cout<<endl;
 
 
-    set<int>::iterator it = s.begin();
-    it++;
+//     set<int>::iterator it = s.begin();
+//     it++;
 
     
-    s.erase(it);
-    for(auto i : s){
-        cout<<i<<" ";
-    } cout<<endl;
+//     s.erase(it);
+//     for(auto i : s){
+//         cout<<i<<" ";
+//     } cout<<endl;
 
-    cout<<s.count(6)<<endl;   //checks if no. is there or not
-}
+//     cout<<s.count(6)<<endl;   //checks if no. is there or not
+// }
+
+
+
+
+//MAP
+
+
+// #include <iostream>
+// #include <map>
+// using namespace std;
+
+// int main(){
+
+//     map<int,string> m;
+
+//     m[1] = {"Yash"};
+//     m[13] = {"kon"};
+//     m[2] = {"hai"};
+//     m.insert({5,"oyeee"});
+
+//     for(auto i:m){
+//         cout<< i.first << " " << i.second << endl;
+//     }
+
+//     cout<< "finding 12 yes or no " << m.count(-12) <<endl;
+
+//     m.erase(2);
+//     for(auto i:m){
+//         cout<< i.first << " " << i.second << endl;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+//ALGORITHM
+
+
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+
+// using namespace std;
+
+// int main(){
+
+//     vector<int> v;
+
+//     v.push_back(1);
+//     v.push_back(2);
+//     v.push_back(5);
+//     v.push_back(7);
+//     v.push_back(10);
+
+//     cout<<"Finding 6-> " << binary_search(v.begin(), v.end(), 6) << endl;
+
+//     cout<<"Lower bound-> " << lower_bound(v.begin(), v.end(), 6)-v.begin() << endl;
+//     cout<<"Upper bound-> " << upper_bound(v.begin(), v.end(), 10)-v.begin() << endl;
+
+//     // more algorithms
+//     max(a,b);
+//     min(a,b);
+//     swap(a,b);
+//     reverse(var.begin(), var.end());
+
+//     rotate(v.begin(), v.end()+1, v.end());  //1 is how many elements u want to rotate
+
+//     sort(v.begin(),v.end());
+// }
