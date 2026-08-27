@@ -61,29 +61,76 @@
 
 
 
+
+
 //Print counting
+
+// #include <iostream>
+// using namespace std;
+
+// int count(int n){
+//     if(n==0){
+//         return 0;
+//     }
+
+//     cout << n << endl;
+    
+//     count(n-1);
+
+    
+//     cout << n << endl;
+// }
+
+// int main(){
+//     int n;
+//     cin>>n;
+//     cout << endl;
+//     count(n);
+    
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+//SAY Digit
 
 #include <iostream>
 using namespace std;
 
-int count(int n){
+void sayDigit(int n, string arr[]){
+
+    //base case
     if(n==0){
-        return 0;
+        return;
     }
 
-    cout << n << endl;
-    
-    count(n-1);
+    //Processing
+    int digit = n % 10;
+    n = n/10;
 
-    
-    cout << n << endl;
+    //Recursive call
+    sayDigit(n,arr);
+
+    cout << arr[digit] <<" ";
 }
 
 int main(){
+
+    string arr[10] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+
     int n;
     cin>>n;
+
     cout << endl;
-    count(n);
-    
+    sayDigit(n, arr);
+    cout << endl;
+
     return 0;
 }
