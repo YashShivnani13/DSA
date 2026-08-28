@@ -73,3 +73,58 @@
     
 //     return 0;
 // }
+
+
+
+
+
+
+
+
+//Linear Search with Recursion
+
+
+// #include <iostream>
+// using namespace std;
+
+// bool Ls(int *arr, int size, int key){
+
+//     //base case
+//     if(size==0){
+//         return false;
+//     }
+//     if(arr[0]==key){
+//         return true;
+//     }
+
+//     //recursive relation
+//     bool remainingPart = Ls(arr+1, size-1, key);
+//     return remainingPart;
+// }
+
+
+// int main(){
+
+//     int arr[5] = {5,67,3,5,2};
+//     int size = 5;
+//     int key = 1 ;
+
+//     bool search = Ls(arr,size,key);
+
+//     if(search){
+//         cout << "Present";
+//     }
+//     else{
+//         cout<<"Absent";
+//     }
+
+//     return 0;
+// }
+
+
+
+//Binary Search with Recursion
+
+
+#include <iostream>
+using namespace std;
