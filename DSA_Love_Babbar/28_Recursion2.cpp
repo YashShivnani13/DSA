@@ -123,8 +123,60 @@
 
 
 
+
+
 //Binary Search with Recursion
 
 
 #include <iostream>
 using namespace std;
+
+void print(int *arr, int s, int e){
+    for(int i=s; i<=e; i++){
+        cout << arr[i] << " ";
+    } cout << endl;
+}
+
+bool binarySearch(int *arr, int s, int e, int k){
+
+    cout<<endl;
+    print(arr, s, e);
+
+    //base case
+    if(s>e){
+        return false;
+    }
+
+    int mid = s + (e-s)/2;
+    cout << "Value of mid is "<< arr[mid] << endl;
+
+    //base
+    if(arr[mid]==k){
+        return true;
+    }
+
+    //recursive relation
+    if(arr[mid]<k){
+        return binarySearch(arr, mid+1, e, k);
+    }
+    else{
+        return binarySearch(arr, s, mid-1, k);
+    }
+
+}
+
+int main(){
+    int arr[5] = {2,4,6,8,10};
+    int size = 5;
+    int key = 10;
+
+    int ans = binarySearch(arr, 0, size-1, key);
+    if(ans){
+        cout<<"present";
+    }
+    else{
+        cout<<"absent";
+    }
+
+    return 0;
+}
