@@ -3,7 +3,10 @@
 #include <iostream>
 using namespace std;
 
-void reverse(string& str, int i, int j){
+void reverse(string& str, int i){
+
+    int j = str.size()-i-1;
+    
     //base case
     if(i>j){
         return;
@@ -15,14 +18,14 @@ void reverse(string& str, int i, int j){
     j--;
 
     //recursion
-    reverse(str, i, j);
+    reverse(str, i);
 }
 
 int main(){
 
     string strs = "yash";
     
-    reverse(strs, 0, strs.size()-1);
+    reverse(strs, 0);
 
     cout << strs << endl;
 
