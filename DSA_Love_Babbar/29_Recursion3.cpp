@@ -89,38 +89,69 @@
 //Power using recursion
 
 
+// #include <iostream>
+// using namespace std;
+
+// int power(int a, int b){
+
+//     //base case
+//     if(b==0)
+//         return 1;
+//     if(b==1)
+//         return a;
+
+//     //recursive call
+//     int ans = power(a, b/2);
+
+//     //b is even
+//     if(b%2 == 0){
+//         return ans * ans;
+//     }
+//     else{
+//         //b is odd
+//         return a*ans*ans;
+//     }
+
+// }
+
+// int main(){
+
+//     int a,b;
+//     cin>>a>>b;
+
+//     int ans = power(a,b);
+//     cout << "Answer is " << ans;
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+//Bubble sort using recursion
+
+
 #include <iostream>
 using namespace std;
 
-int power(int a, int b){
+void bubbleSort(int *arr, int size){
 
-    //base case
-    if(b==0)
-        return 1;
-    if(b==1)
-        return a;
-
-    //recursive call
-    int ans = power(a, b/2);
-
-    //b is even
-    if(b%2 == 0){
-        return ans * ans;
-    }
-    else{
-        //b is odd
-        return a*ans*ans;
+    //base case - already sorted
+    if(size == 0 || size == 1){
+        return;
     }
 
+    
 }
 
 int main(){
+    int arr[5] = {4,6,1,9,2};
 
-    int a,b;
-    cin>>a>>b;
 
-    int ans = power(a,b);
-    cout << "Answer is " << ans;
+    bubbleSort(arr, 5);
 
     return 0;
 }
