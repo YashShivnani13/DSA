@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-void merge(int *arr, int s, int e){
+void merge(int *arr, int s, int e){        //"Take two sorted problems and combine them."
 
     int mid = s + (e - s) / 2;
 
@@ -32,7 +32,7 @@ void merge(int *arr, int s, int e){
     mainArrIndex = s;
 
     while( index1 < len1 && index2 < len2 ){
-        if(first[index1] < second[index2]){
+        if(first[index1] <= second[index2]){
             arr[mainArrIndex++] = first[index1++];
         }
         else{
@@ -52,7 +52,7 @@ void merge(int *arr, int s, int e){
 }
 
 
-void mergeSort(int *arr, int s, int e){
+void mergeSort(int *arr, int s, int e){        //"Break the problem into smaller problems."
  
     //base case
     if(s>=e){
