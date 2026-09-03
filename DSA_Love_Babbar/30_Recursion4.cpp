@@ -1,87 +1,87 @@
 //MERGE SORT USING RECURSION
 
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-void merge(int *arr, int s, int e){        //"Take two sorted problems and combine them."
+// void merge(int *arr, int s, int e){        //"Take two sorted problems and combine them."
 
-    int mid = s + (e - s) / 2;
+//     int mid = s + (e - s) / 2;
 
-    int len1 = mid-s+1;
-    int len2 = e-mid;
+//     int len1 = mid-s+1;
+//     int len2 = e-mid;
 
-    int *first = new int[len1];
-    int *second = new int[len2];
+//     int *first = new int[len1];
+//     int *second = new int[len2];
 
-    //copy values
-    int mainArrIndex = s;
-    for(int i=0; i<len1; i++){
-        first[i] = arr[mainArrIndex++];
-    }
+//     //copy values
+//     int mainArrIndex = s;
+//     for(int i=0; i<len1; i++){
+//         first[i] = arr[mainArrIndex++];
+//     }
 
-    mainArrIndex = mid+1;
-    for(int i=0; i<len2; i++){
-        second[i] = arr[mainArrIndex++];
-    }
-
-
-    //merge 2 sorted arrays
-    int index1 = 0;
-    int index2 = 0;
-    mainArrIndex = s;
-
-    while( index1 < len1 && index2 < len2 ){
-        if(first[index1] <= second[index2]){
-            arr[mainArrIndex++] = first[index1++];
-        }
-        else{
-            arr[mainArrIndex++] = second[index2++];
-        }
-    }
-
-    while( index1 < len1 ){
-        arr[mainArrIndex++] = first[index1++];
-    }
-    while( index2 < len2 ){
-        arr[mainArrIndex++] = second[index2++];
-    }
-
-    delete []first;
-    delete []second;
-}
+//     mainArrIndex = mid+1;
+//     for(int i=0; i<len2; i++){
+//         second[i] = arr[mainArrIndex++];
+//     }
 
 
-void mergeSort(int *arr, int s, int e){        //"Break the problem into smaller problems."
+//     //merge 2 sorted arrays
+//     int index1 = 0;
+//     int index2 = 0;
+//     mainArrIndex = s;
+
+//     while( index1 < len1 && index2 < len2 ){
+//         if(first[index1] <= second[index2]){
+//             arr[mainArrIndex++] = first[index1++];
+//         }
+//         else{
+//             arr[mainArrIndex++] = second[index2++];
+//         }
+//     }
+
+//     while( index1 < len1 ){
+//         arr[mainArrIndex++] = first[index1++];
+//     }
+//     while( index2 < len2 ){
+//         arr[mainArrIndex++] = second[index2++];
+//     }
+
+//     delete []first;
+//     delete []second;
+// }
+
+
+// void mergeSort(int *arr, int s, int e){        //"Break the problem into smaller problems."
  
-    //base case
-    if(s>=e){
-        return;
-    }
+//     //base case
+//     if(s>=e){
+//         return;
+//     }
 
-    int mid = s + (e - s) / 2;
+//     int mid = s + (e - s) / 2;
 
-    //left part sort
-    mergeSort(arr, s, mid);
+//     //left part sort
+//     mergeSort(arr, s, mid);
 
-    //right part sort
-    mergeSort(arr, mid+1, e);
+//     //right part sort
+//     mergeSort(arr, mid+1, e);
 
-    //merge
-    merge(arr, s, e);
-}
+//     //merge
+//     merge(arr, s, e);
+// }
 
 
-int main(){
+// int main(){
 
-    int arr[12] = {2,5,1,9,3,54,65, 72, 12, 3,5, 64};
-    int n = 12;
+//     int arr[12] = {2,5,1,9,3,54,65, 72, 12, 3,5, 64};
+//     int n = 12;
 
-    mergeSort(arr, 0, n-1);
+//     mergeSort(arr, 0, n-1);
 
-    for(int i=0; i<n; i++){
-        cout << arr[i] << " ";
-    }
+//     for(int i=0; i<n; i++){
+//         cout << arr[i] << " ";
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
