@@ -93,77 +93,116 @@
 
 //QUICK SORT USING RECURSION
 
-#include <iostream>
-using namespace std;
 
-int partition(int* arr, int s, int e){
+// #include <iostream>
+// using namespace std;
+
+// int partition(int* arr, int s, int e){
     
-    int pivot = arr[s];
+//     int pivot = arr[s];
 
-    //count elements less than pivot
-    int count = 0;
-    for(int i = s+1; i<=e; i++){
-        if( arr[i] <= pivot ){
-            count++;
-        }
-    }
+//     //count elements less than pivot
+//     int count = 0;
+//     for(int i = s+1; i<=e; i++){
+//         if( arr[i] <= pivot ){
+//             count++;
+//         }
+//     }
 
-    //got the right position of pivot
-    int pivotIndex = s + count;
+//     //got the right position of pivot
+//     int pivotIndex = s + count;
 
-    swap(arr[pivotIndex], arr[s]);
+//     swap(arr[pivotIndex], arr[s]);
 
-    //left and right part execution
-    int i = s , j = e;
+//     //left and right part execution
+//     int i = s , j = e;
 
-    while(i < pivotIndex && j > pivotIndex){
+//     while(i < pivotIndex && j > pivotIndex){
 
-        //agar koi pivot se small element already left me h
-        while(arr[i] <= pivot){
-            i++;
-        }
+//         //agar koi pivot se small element already left me h
+//         while(arr[i] <= pivot){
+//             i++;
+//         }
 
-        //agar koi pivot se big element already right me h
-        while(arr[j] > pivot){
-            j--;
-        }
+//         //agar koi pivot se big element already right me h
+//         while(arr[j] > pivot){
+//             j--;
+//         }
 
-        if(i < pivotIndex && j > pivotIndex){
-            swap(arr[i++], arr[j--]);
-        }
+//         if(i < pivotIndex && j > pivotIndex){
+//             swap(arr[i++], arr[j--]);
+//         }
         
-    }
-    return pivotIndex;
-}
+//     }
+//     return pivotIndex;
+// }
 
 
 
-void quickSort(int *arr, int s, int e){
+// void quickSort(int *arr, int s, int e){
 
-    //base case
-    if(s>=e){
-        return;
-    }
+//     //base case
+//     if(s>=e){
+//         return;
+//     }
 
-    //partition karege
-    int p = partition(arr, s, e);
+//     //partition karege
+//     int p = partition(arr, s, e);
 
-    //left part sort
-    quickSort(arr, s, p-1);
+//     //left part sort
+//     quickSort(arr, s, p-1);
 
-    //right part sort
-    quickSort(arr, p+1, e);
-}
+//     //right part sort
+//     quickSort(arr, p+1, e);
+// }
 
-int main(){
-    int arr[12] = {2,5,1,9,3,54,65, 72, 12, 3,5, 64};
-    int n = 12;
+// int main(){
+//     int arr[12] = {2,5,1,9,3,54,65, 72, 12, 3,5, 64};
+//     int n = 12;
 
-    quickSort(arr, 0, n-1);
+//     quickSort(arr, 0, n-1);
 
-    for(int i=0; i<n; i++){
-        cout<<arr[i]<<" ";
-    }
+//     for(int i=0; i<n; i++){
+//         cout<<arr[i]<<" ";
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+
+
+
+//SUBSETS (Power set) leetcode 78
+
+
+// class Solution {
+
+// private:
+//     void solve(vector<int> nums, vector<int> current, int index, vector<vector<int>>& ans){
+
+//         //base case
+//         if(index>=nums.size()){
+//             ans.push_back(current);
+//             return;
+//         }
+
+//         //exclude
+//         solve(nums, current, index+1, ans);
+
+//         //include
+//         int element = nums[index];
+//         current.push_back(element);
+//         solve(nums, current, index+1, ans);
+//     }
+
+// public:
+//     vector<vector<int>> subsets(vector<int>& nums) {
+//         vector<vector<int>> ans;
+//         vector<int> current;
+//         int index = 0;
+
+//         solve(nums, current, index, ans);
+//         return ans;
+//     }
+// };
