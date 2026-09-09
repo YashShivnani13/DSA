@@ -369,9 +369,11 @@
 //     }
 
 //   public:
-//     vector<string> ratInMaze(vector<vector<int>>& m ,int n) {
-//         // code here
-//         vector<string> ans;
+//     vector<string> ratInMaze(vector<vector<int>>& m) {
+//     vector<string> ans;
+//     int n = m.size();
+
+//         // base case
 //         if(m[0][0] == 0){
 //             return 0;
 //         }
