@@ -49,3 +49,41 @@
 
 //     return 0;
 // }
+
+
+
+
+
+
+
+
+
+//CONSTRUCTOR
+
+#include <iostream>
+using namespace std;
+
+class hero {
+
+    private:
+    int health;
+
+    public:
+    char level;
+
+    //constructor
+    hero() {
+        cout<<"Constructor called" <<endl;
+    }
+
+};
+
+int main(){
+
+    //static object created
+    hero ramesh;
+
+    //dynamic obejct created
+    hero *h = new hero;
+
+}
