@@ -67,31 +67,24 @@
 using namespace std;
 
 
-// ============================================================
-//                         CLASS
-// ============================================================
+//CLASS
 
 class Hero {
 
 private:
-    // Private property
     // Cannot be accessed directly from main()
     int health;
     
 public:
-    // Public properties
     char *name;
     char level;
 
     // Static variable
-    // There is only ONE copy of this variable for the
-    // entire Hero class, not one copy for every object.
     static int timeToComplete;
 
 
-    // ========================================================
-    //                  DEFAULT CONSTRUCTOR
-    // ========================================================
+//DEFAULT CONSTRUCTOR
+
 
     Hero() {
 
@@ -103,30 +96,20 @@ public:
     }
 
 
-    // ========================================================
-    //                PARAMETERIZED CONSTRUCTOR
-    // ========================================================
+//PARAMETERIZED CONSTRUCTOR
 
     Hero(int health) {
 
         cout << "Parameterized constructor called" << endl;
 
         // 'this' points to the current object.
-        //
-        // this->health  = object's health
-        // health       = parameter
-        //
         this->health = health;
 
-        // Since name is a pointer, we should initialize it
-        // before using it.
+        // Since name is a pointer, we should initialize it before using it.
         name = new char[100];
     }
 
-
-    // ========================================================
-    //          PARAMETERIZED CONSTRUCTOR - 2 PARAMETERS
-    // ========================================================
+    //PARAMETERIZED CONSTRUCTOR - 2 PARAMETERS
 
     Hero(int health, char level) {
 
@@ -139,10 +122,7 @@ public:
         name = new char[100];
     }
 
-
-    // ========================================================
-    //                    COPY CONSTRUCTOR
-    // ========================================================
+    //COPY CONSTRUCTOR
 
     /*
         Copy constructor is called when we create a NEW object
@@ -165,16 +145,12 @@ public:
         cout << "Copy constructor called" << endl;
 
 
-        // ----------------------------------------------------
         // Copy health
-        // ----------------------------------------------------
-
         this->health = temp.health;
 
 
-        // ----------------------------------------------------
         // Copy level
-        // ----------------------------------------------------
+
 
         this->level = temp.level;
 
