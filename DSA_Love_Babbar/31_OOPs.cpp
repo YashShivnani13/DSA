@@ -155,9 +155,8 @@ public:
         this->level = temp.level;
 
 
-        // ----------------------------------------------------
         // DEEP COPY of name
-        // ----------------------------------------------------
+
 
         /*
             name is a pointer.
@@ -182,10 +181,7 @@ public:
         this->name = ch;
     }
 
-
-    // ========================================================
-    //                         PRINT
-    // ========================================================
+    //PRINT
 
     void print() {
 
@@ -201,9 +197,7 @@ public:
     }
 
 
-    // ========================================================
-    //                       GETTERS
-    // ========================================================
+    //GETTERS
 
     // Getter for health
     int getHealth() {
@@ -217,9 +211,7 @@ public:
     }
 
 
-    // ========================================================
-    //                       SETTERS
-    // ========================================================
+    //SETTERS
 
     // Setter for health
     void setHealth(int h) {
@@ -242,9 +234,8 @@ public:
     }
 
 
-    // ========================================================
-    //                  STATIC FUNCTION
-    // ========================================================
+    // STATIC FUNCTION
+
 
     /*
         Static functions belong to the CLASS, not to an object.
@@ -262,9 +253,7 @@ public:
     }
 
 
-    // ========================================================
-    //                       DESTRUCTOR
-    // ========================================================
+    // DESTRUCTOR
 
     /*
         Destructor is automatically called when an object
@@ -295,9 +284,8 @@ public:
 };
 
 
-// ============================================================
-//             STATIC VARIABLE INITIALIZATION
-// ============================================================
+// STATIC VARIABLE INITIALIZATION
+
 
 /*
     Static variables must be defined outside the class.
@@ -309,9 +297,8 @@ int Hero::timeToComplete = 5;
 
 
 int main() {
-    // ========================================================
-    //                  1. STATIC VARIABLE
-    // ========================================================
+    //1. STATIC VARIABLE
+   
 
     /*
         We don't need an object to access a static variable.
@@ -333,10 +320,8 @@ int main() {
          << endl;
 
 
-
-    // ========================================================
-    //                  2. STATIC OBJECT
-    // ========================================================
+    //2. STATIC OBJECT
+   
 
     /*
         This creates an object in stack memory.
@@ -371,10 +356,8 @@ int main() {
     hero1.print();
 
 
-
-    // ========================================================
-    //                  3. COPY CONSTRUCTOR
-    // ========================================================
+    // 3. COPY CONSTRUCTOR
+  
 
     /*
         Now we create hero2 using hero1.
@@ -399,9 +382,7 @@ int main() {
 
 
 
-    // ========================================================
-    //                  4. DEEP COPY
-    // ========================================================
+    //4. DEEP COPY
 
     /*
         Our copy constructor performs DEEP COPY.
