@@ -316,7 +316,8 @@
 
 //POLYMORPHISM
 
-//Compile time polymorphism
+
+//Compile time polymorphism / Static Polymorphism
 
 
 //function overloading
@@ -394,4 +395,33 @@
 
 
 
-//Run time Polymorphism
+//Run time Polymorphism / Dynamic Polymorphism
+
+
+//Method overriding
+
+// #include <iostream>
+// using namespace std;
+
+// class Animal{
+//     public:
+//     void speak(){
+//         cout<<"speaking"<<endl;
+//     }
+// };
+
+// class dog : public Animal{
+//     public:
+//     void speak(){
+//         cout<<"Barking"<<endl;
+//     }
+// };
+
+
+// int main(){
+
+//     dog d;
+//     d.speak();
+
+//     return 0;
+// }
