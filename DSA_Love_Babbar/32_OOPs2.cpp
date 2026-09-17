@@ -223,38 +223,42 @@
 //HEIRARCHICAL INHERITANCE
 
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-class Animal{
-    public:
-        string name;
-        int age;
-
-
-    public:
-    void speak(){
-        cout<<"Speaking " <<endl;
-    }
-};
+// class Animal{
+//     public:
+//         string name;
+//         int age;
 
 
-class dog : public Animal{
+//     public:
+//     void speak(){
+//         cout<<"Speaking " <<endl;
+//     }
+// };
+
+
+// class dog : public Animal{
     
-};
+// };
 
 
 
-class play : public Animal{
+// class play : public Animal{
     
-};
+// };
 
 
-int main(){
+// int main(){
     
-    play p;
+//     play p;
 
-    p.speak();
+//     p.speak();
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+
+
