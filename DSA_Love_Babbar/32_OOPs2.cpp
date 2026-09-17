@@ -173,11 +173,60 @@
 
 
 
+// #include <iostream>
+// using namespace std;
+
+// class Animal{
+//     public:
+//         string name;
+//         int age;
+
+
+//     public:
+//     void speak(){
+//         cout<<"Speaking " <<endl;
+//     }
+// };
+
+
+// class dog{
+//     public:
+//     void bark(){
+//         cout<<"barking "<<endl;
+//     }
+
+// };
+
+
+
+// class play : public dog , public Animal{
+    
+// };
+
+
+// int main(){
+    
+//     play p;
+
+//     p.speak();
+//     p.bark();
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+//HEIRARCHICAL INHERITANCE
+
+
 #include <iostream>
 using namespace std;
 
 class Animal{
-
     public:
         string name;
         int age;
@@ -190,16 +239,13 @@ class Animal{
 };
 
 
-class dog{
-    public:
-    void bark(){
-        cout<<"barking "<<endl;
-    }
-
+class dog : public Animal{
+    
 };
 
 
-class play : public dog , public Animal{
+
+class play : public Animal{
     
 };
 
@@ -209,7 +255,6 @@ int main(){
     play p;
 
     p.speak();
-    p.bark();
 
     return 0;
 }
