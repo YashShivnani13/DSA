@@ -316,4 +316,30 @@
 
 //POLYMORPHISM
 
+//cards on the table
+//function overloading
 
+// #include <iostream>
+// using namespace std;
+
+// class a{
+//     public:
+//     void sayhello(){
+//         cout<< " hi " <<endl;
+//     }
+
+//     void sayhello(string name){
+//         cout<< " hi " <<name << endl;
+//     }
+// };
+
+// int main(){
+//     a obj;
+//     obj.sayhello();
+
+//     return 0;
+// } 
+
+
+
+//operator overloading
