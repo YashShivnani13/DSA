@@ -81,3 +81,132 @@
 
 //     return 0;
 // }
+
+
+
+
+
+
+//SINGLE INHERITANCE
+
+
+// #include <iostream>
+// using namespace std;
+
+// class Animal{
+
+//     public:
+//         string name;
+//         int age;
+
+
+//     public:
+//     void speak(){
+//         cout<<"Speaking " <<endl;
+//     }
+// };
+
+
+// class dog: public Animal{
+
+// };
+
+// int main(){
+//     dog d;
+//     d.speak();
+//     cout << d.age << endl;
+
+//     return 0;
+// }
+
+
+
+
+
+//MULTI-LEVEL INHERITANCE 
+
+
+// #include <iostream>
+// using namespace std;
+
+// class Animal{
+
+//     public:
+//         string name;
+//         int age;
+
+
+//     public:
+//     void speak(){
+//         cout<<"Speaking " <<endl;
+//     }
+// };
+
+
+// class dog: public Animal{
+
+// };
+
+
+// class bark : public dog{
+    
+// };
+
+
+// int main(){
+//     dog d;
+//     d.speak();
+//     cout << d.age << endl;
+
+//     bark b;
+//     b.speak();
+
+//     return 0;
+// }
+
+
+
+
+
+
+//MULTIPLE INHERITANCE
+
+
+
+#include <iostream>
+using namespace std;
+
+class Animal{
+
+    public:
+        string name;
+        int age;
+
+
+    public:
+    void speak(){
+        cout<<"Speaking " <<endl;
+    }
+};
+
+
+class dog: public Animal{
+
+};
+
+
+class bark : public dog{
+    
+};
+
+
+int main(){
+    dog d;
+    d.speak();
+    cout << d.age << endl;
+
+    bark b;
+    b.speak();
+
+    return 0;
+}
