@@ -58,7 +58,7 @@
 
 
 
-//CONSTRUCTOR
+//CONSTRUCTOR/DESTRUCTOR/ETC
 
 
 
@@ -576,3 +576,74 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+//class
+
+
+// #include <iostream>
+// using namespace std;
+
+// class myclass{
+//     public:
+//         int value;
+//         string name;
+// };
+
+// int main(){
+
+//     myclass class10;
+
+//     class10.value = 15;
+//     class10.name = "yash";
+
+//     cout << class10.value <<endl;
+//     cout << class10.name <<endl; 
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+//constructor
+
+
+// #include <iostream>
+// using namespace std;
+
+// class myclass{
+//     public:
+
+//         string brand;
+//         int year;
+
+//         myclass(){       //normal constructor
+//             cout<< "constructor called";
+//         }
+
+//         myclass(string x, int y){  //parameterized constructor
+//             brand = x;
+//             year = y;
+//         }
+// };
+
+// int main(){
+//     myclass obj;
+
+//     myclass obj1("bmw", 2000);
+
+//     cout<<endl;
+//     cout<< obj1.brand << endl;
+
+//     return 0;
+// }
+
