@@ -169,7 +169,7 @@
 
 
 
-//MULTIPLE INHERITANCE
+//MULTIPLE INHERITANCE 
 
 
 
@@ -190,23 +190,26 @@ class Animal{
 };
 
 
-class dog: public Animal{
+class dog{
+    public:
+    void bark(){
+        cout<<"barking "<<endl;
+    }
 
 };
 
 
-class bark : public dog{
+class play : public dog , public Animal{
     
 };
 
 
 int main(){
-    dog d;
-    d.speak();
-    cout << d.age << endl;
+    
+    play p;
 
-    bark b;
-    b.speak();
+    p.speak();
+    p.bark();
 
     return 0;
 }
