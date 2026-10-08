@@ -50,7 +50,7 @@ class Node{
     }
 };
 
-//Insertion in LL
+//Insertion in LL (at head)
 
 void InsertAtHead(Node* &head, int d){
 
@@ -64,6 +64,15 @@ void InsertAtHead(Node* &head, int d){
     head = temp;
 }
 
+//Insertion of Node (at tail)
+
+void insertAtTail(Node* &tail, int d){
+
+    Node* temp = new Node(d);
+
+    tail -> next = temp;
+    tail = temp;
+}
 
 //Traverse and Print a LL
 
@@ -89,10 +98,16 @@ int main(){
     //head pointed to node1
     Node* head = node1;
 
+    //tail pointed to node1
+    Node* tail = node1;
+
     print(head);
 
     InsertAtHead(head, 12);
 
+    print(head);
+
+    insertAtTail(tail, 19);
     print(head);
 
     return 0;
