@@ -45,11 +45,25 @@ class Node{
     int data;
     Node* next;
 
-    //constructor
+    //Constructor
+
     Node(int data){
         this -> data = data;
         this -> next = NULL;
     }
+
+    //Destructor
+
+    ~Node(){
+        int value = this -> data;
+
+        //memory free
+        if(this -> next != NULL){
+            delete next;
+            this -> next = NULL; 
+        }
+    }
+
 };
 
 //Insertion in LL (at head)
@@ -120,6 +134,42 @@ void insertAtPosition(Node* &head, Node* &tail, int position, int d){
 }
 
 
+//Deletion of a Node
+
+
+void deleteNode(int position, Node* &head){
+
+    //deleting start node
+
+    if(position == 1){
+        Node* temp = head;
+        head = head -> next;
+
+        //free up the memory
+        temp -> next = NULL;
+        delete temp;
+    }
+    else{
+
+        //deleting middle or last node
+
+        Node* curr = head;
+        Node* prev = NULL;
+
+        int count = 1;
+        while(count < position){
+            prev = curr;
+            curr = curr -> next;
+            count++;
+        }
+
+        prev -> next = curr -> next;
+        curr -> next = NULL;
+        delete curr;
+
+    }
+}
+
 int main(){
 
     //created a new node
@@ -147,6 +197,12 @@ int main(){
     print(head);
 
     insertAtPosition(head, tail, 1, 22);
+    print(head);
+
+    deleteNode(1, head);
+    print(head);
+
+    deleteNode(3, head);
     print(head);
 
     return 0;
