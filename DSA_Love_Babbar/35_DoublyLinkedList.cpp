@@ -61,16 +61,38 @@ void insertatHead(Node* &head, int d){
 }
 
 
+//Insert a node at Tail
+void insertAtTail(Node* &tail, int d){
+
+    //create a new node
+    Node* temp = new Node(d);
+
+    //step 1 - point temp to tail
+    temp -> previous = tail;
+
+    //step 2 - point tail to temp
+    tail -> next = temp;
+
+    //step 3 - change position of tail
+    tail = temp;
+}
+
+
 
 int main(){
     Node* node1 = new Node(10);
     Node* head = node1;
+    Node* tail = node1;
 
     print(head);
     cout <<"lenght of node is " << getLength(head) << endl;
 
     insertatHead(head, 9);
     print(head);
+
+    insertAtTail(tail, 2);
+    print(head);
+
 
     return 0;
 }
