@@ -22,7 +22,7 @@ void print(Node* head){
     Node* temp = head;
 
     while(temp != NULL){
-        cout<< temp -> data;
+        cout<< temp -> data <<" ";
         temp = temp -> next;
     }
     cout << endl;
@@ -44,12 +44,33 @@ int getLength(Node* head){
 }
 
 
+//Insert a node at head
+void insertatHead(Node* &head, int d){
+
+    //create a new node
+    Node* temp = new Node(d);
+
+    //step 1 - point temp to head
+    temp -> next = head;
+
+    //step 2 - point head to temp
+    head -> previous = temp;
+
+    //step 3 - change position of head
+    head = temp;
+}
+
+
+
 int main(){
     Node* node1 = new Node(10);
     Node* head = node1;
 
     print(head);
-    cout << getLength(head) << endl;
+    cout <<"lenght of node is " << getLength(head) << endl;
+
+    insertatHead(head, 9);
+    print(head);
 
     return 0;
 }
