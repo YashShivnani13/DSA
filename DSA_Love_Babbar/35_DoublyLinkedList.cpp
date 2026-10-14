@@ -15,6 +15,9 @@ class Node{
     }
 };
 
+
+//traversing 
+
 void print(Node* head){
     Node* temp = head;
 
@@ -25,6 +28,8 @@ void print(Node* head){
     cout << endl;
 }
 
+
+//size of LL
 
 int getLength(Node* head){
     int len = 0;
