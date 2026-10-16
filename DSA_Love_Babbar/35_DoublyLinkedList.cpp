@@ -47,34 +47,49 @@ int getLength(Node* head){
 //Insert a node at head
 void insertatHead(Node* &head, int d){
 
-    //create a new node
-    Node* temp = new Node(d);
+    //empty list
+    if(head == NULL){
+        Node* temp = new Node(d);
+        head = temp;
+    }
 
-    //step 1 - point temp to head
-    temp -> next = head;
+    else{
+        //create a new node
+        Node* temp = new Node(d);
 
-    //step 2 - point head to temp
-    head -> previous = temp;
+        //step 1 - point temp to head
+        temp -> next = head;
 
-    //step 3 - change position of head
-    head = temp;
+        //step 2 - point head to temp
+        head -> previous = temp;
+
+        //step 3 - change position of head
+        head = temp;
+    }
 }
 
 
 //Insert a node at Tail
 void insertAtTail(Node* &tail, int d){
 
-    //create a new node
-    Node* temp = new Node(d);
+    if(tail == NULL){
+        Node* temp = new Node(d);
+        tail = temp;
+    }
+    else{
+        //create a new node
+        Node* temp = new Node(d);
 
-    //step 1 - point temp to tail
-    temp -> previous = tail;
+        //step 1 - point temp to tail
+        temp -> previous = tail;
 
-    //step 2 - point tail to temp
-    tail -> next = temp;
+        //step 2 - point tail to temp
+        tail -> next = temp;
 
-    //step 3 - change position of tail
-    tail = temp;
+        //step 3 - change position of tail
+        tail = temp;
+    }
+
 }
 
 
