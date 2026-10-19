@@ -180,7 +180,7 @@ int main(){
     Node* tail = node1;
 
     print(head);
-    cout <<"lenght of node is " << getLength(head) << endl;
+    cout <<"length of node is " << getLength(head) << endl;
 
     insertatHead(head, 9);
     print(head);
