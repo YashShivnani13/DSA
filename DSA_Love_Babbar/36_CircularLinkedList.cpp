@@ -19,7 +19,6 @@ class Node {
             delete next;
             next = NULL;
         }
-        cout << " memory is free for node with data " << value << endl;
     }
 
 };
@@ -70,6 +69,7 @@ void print(Node* tail) {
     cout << endl;
 } 
 
+
 void deleteNode(Node* &tail, int value) {
 
     //empty list
@@ -91,12 +91,12 @@ void deleteNode(Node* &tail, int value) {
 
         prev -> next = curr -> next;
 
-        //1 Node Linked List
+        // one Node Linked List
         if(curr == prev) {
             tail = NULL;
         }
 
-        //>=2 Node linked list
+        // >=2 Node linked list
         else if(tail == curr ) {
             tail = prev;
         }
