@@ -23,6 +23,9 @@ class Node {
 
 };
 
+
+//insetion of node
+
 void insertNode(Node* &tail, int element, int d) {
     
 
@@ -51,6 +54,10 @@ void insertNode(Node* &tail, int element, int d) {
 
 }    
 
+
+//traversing a cll
+
+
 void print(Node* tail) {
 
     Node* temp = tail;
@@ -69,6 +76,9 @@ void print(Node* tail) {
     cout << endl;
 } 
 
+
+
+//deletion of a node
 
 void deleteNode(Node* &tail, int value) {
 
